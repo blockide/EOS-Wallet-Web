@@ -1,0 +1,44 @@
+.transaction {
+  .transaction-meta {
+    width: calc(100% - 160px);
+  }
+  .transaction-date {
+    text-align: center;
+    margin-right: 1.25rem;
+    .date-month {
+      font-size: 80%;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+    .date-day {
+      font-size: 130%;
+      font-weight: 200;
+      line-height: 90%;
+    }
+  }
+  .transaction-thumbnail {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border: 3px solid $orange;
+    @include border-radius(20px);
+  }
+  .transaction-memo {
+    margin-left: 1.25rem;
+    p {
+      margin: 0;
+    }
+  }
+  .transaction-amount-container {
+    width: 160px;
+    text-align: right;
+    .transaction-icon {
+      margin-left: .25rem;
+      font-size: 80%;
+    }
+    .transaction-amount {
+      margin-bottom: 0;
+      font-size: 120%;
+    }
+  }
+}

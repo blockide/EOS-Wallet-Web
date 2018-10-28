@@ -1,0 +1,118 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.main-content {
+  float: left;
+  width: calc(100% - 275px);
+  padding: 2rem 2.5rem;
+  flex: 1 0 auto;
+  @media (max-width: 1200px) {
+    width: calc(100% - 225px);
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      background-color: $bg-grey-60;
+      padding: .75rem 1.5rem;
+      @include border-radius(12px);
+      &:nth-child(even) {
+        background-color: transparent;
+      }
+    }
+  }
+  
+  .list-item {
+    background-color: $bg-grey-60;
+    padding: .75rem 1.5rem;
+    @include border-radius(12px);
+    margin-bottom: 0.25rem;
+  }
+  
+  .section {
+    margin-bottom: 3em;
+  }
+
+  .module {
+    background-color: $bg-grey-60;
+    width: 100%;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    @include border-radius(12px);
+    p {
+      margin-bottom: 0;
+      font-size: 90%;
+      font-weight: 200;
+      line-height: 1.5rem;
+    }
+  }
+  
+  .form-text {
+    float: right;
+  }
+  
+  .module-search {
+    position: relative;
+    width: 100%;
+    input {
+      width: 100%;
+      height: 30px;
+      padding-left: 2.5rem;
+      @include border-radius(15px);
+    }
+    &:before {
+      font-family: 'icomoon' !important;
+      content: "\e905";
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      color: $bg-grey-100;
+      font-size: 90%;
+    }
+  }
+  
+  .export {
+    margin-right: .5rem;
+    color: $blue;
+    &:before {
+      font-size: 140%;
+    }
+  }
+}
+
+.text-link {
+  color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input[type="text"].prefix {
+    padding-left: 4.5rem;
+  }
+
+  .input-prefix {
+    position: relative;
+    &:before {
+      content: "@";
+      color: $dark-grey;
+      text-align: center;
+      line-height: 3.25rem;
+      font-size: 110%;
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      width: 50px;
+      height: 52px;
+      background-color: $light-grey;
+      @include border-radius(0.25rem 0 0 0.25rem);
+    }
+  }

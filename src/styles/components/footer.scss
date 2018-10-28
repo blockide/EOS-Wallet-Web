@@ -1,0 +1,17 @@
+footer {
+  margin-top: 7rem;
+  padding-top: .5rem;
+  border-top: 2px solid $bg-grey-60;
+  color: $bg-grey-60;
+  a {
+    color: $bg-grey-60;
+    font-size: 80%;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: $bg-grey-40;
+      text-decoration: none;
+    }
+  }
+}

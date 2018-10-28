@@ -1,0 +1,104 @@
+.left-nav {
+  background: $bg-grey-60;
+  min-height: 80px;
+  width: 275px;
+  @media (max-width: 1200px) {
+    width: 225px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .col-link {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.25em;
+    position: relative;
+    font-size: 90%;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      height: 1px;
+      width: 100%;
+      @include gradient($bg-grey-60, #4B5259, left);
+    }
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: inherit;
+    }
+    &.active {
+        background: $blue;
+        span {
+          color: white;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          right: -8px;
+          top: 0;
+          width: 0; 
+          height: 0; 
+          border-top: 29px solid transparent;
+          border-bottom: 29px solid transparent;
+          border-left: 8px solid $blue;
+          z-index: 1;
+        }
+      }
+    span {
+      line-height: 1.5;
+      margin-right: .5em;
+      color: $blue;
+    }
+  }
+  .nav-primary {
+    text-transform: uppercase;
+    font-size: 90%;
+  }
+  .-is-logged-in {
+    background: $bg-grey-40;
+    position: relative;
+    .account-info {
+      padding: 1.25rem;
+      .balance { 
+        font-size: 375%;
+        font-weight: 100;
+        line-height: 4rem;
+      }
+      .change {
+        color: $green;
+        font-size: 110%;
+        line-height: 1rem;
+      }
+    }
+    ul {
+      margin-bottom: 0;
+      padding-left: 0;
+      .col-link {
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          height: 1px;
+          width: 100%;
+          @include gradient($bg-grey-40, #5B6168, left);
+        }
+      }
+    }
+  }
+}

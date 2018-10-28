@@ -1,0 +1,18 @@
+.user.transaction {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .user-info {
+    margin-left: 1.25rem;
+    .user-name {
+      color: $blue;
+      line-height: 120%;
+    }
+    .user-memo {
+      color: white;
+      font-size: 90%;
+    }
+  }
+}
